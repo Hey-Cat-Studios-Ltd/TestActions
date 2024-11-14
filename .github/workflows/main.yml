@@ -11,9 +11,11 @@ jobs:
   sendtounity:
   #  if: contains(github.event.head_commit.message, '[test]')
     runs-on: ubuntu-latest
+    env: 
+      MYCOMMIT: github.event.head.sha
     steps:
       - name: test message
-        run: echo 'TESTING {"commit":"{{github.event.head.sha}}"}'
+        run: echo 'TESTING {"commit":"$MYCOMMIT"}'
       - name: tell unity to pull
         run: |
           curl -X POST \
