@@ -15,7 +15,7 @@ jobs:
       MYCOMMIT: ${{ github.event.head.sha }}
     steps:
       - name: test message
-        run: echo 'TESTING {"commit":"$MYCOMMIT"}'
+        run: echo "TESTING {\"commit\":\"$MYCOMMIT\"}"
       - name: tell unity to pull
         run: |
           curl -X POST \
