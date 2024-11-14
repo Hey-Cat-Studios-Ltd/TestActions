@@ -16,7 +16,7 @@ jobs:
         run: echo "TESTING"
       - name: tell unity to pull
         run: |
-          curl -X POST \
+          curl -X POST 
             -d '{"clean": true, "delay": 30}' 
             -H "Content-Type: application/json" 
             -H "Authorization: Basic ${{ secrets.API_KEY }}" 
