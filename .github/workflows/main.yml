@@ -3,7 +3,7 @@ name: Trigger UCB
 on:
   push:
     tags:
-    - 'build*'
+    - '*build*'
     
   workflow_dispatch:
     
