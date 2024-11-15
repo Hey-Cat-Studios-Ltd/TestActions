@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       MYCOMMIT: ${{ github.event.head.sha || github.sha }}
-      MYDATA1: '{"clean\: true, "delay": 30, "commit":'
+      MYDATA1: '{"clean": true, "delay": 30, "commit":"'
       MYDATA2: "$MYCOMMIT"
-      MYDATA3: "'}"
+      MYDATA3: '"}'
       
     steps:
       - name: test message
