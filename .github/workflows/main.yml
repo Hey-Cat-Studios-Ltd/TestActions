@@ -23,6 +23,6 @@ jobs:
         run: |
           curl -X POST \
             -d '{"clean":true,"delay":30}' \
-            -H "Content-Type: application/json" \ 
+            -H "Content-Type: application/json" \
             -H "Authorization: Basic ${{ secrets.API_KEY }}" \
             "https://build-api.cloud.unity3d.com/api/v1/orgs/${{ vars.ORG_ID }}/projects/${{ vars.PROJ_ID }}/buildtargets/${{ vars.BUILD_ID }}/builds"
