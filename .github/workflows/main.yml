@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - name: test message
-        run: echo "TESTING {\"commit\":\"$MYDATA1$MYDATA2$MYDATA3\"}"
+        run: echo "TESTING {\"commit\":\"MYCOMMIT\"}"
       - name: tell unity to pull
         run: |
           curl -X POST \
